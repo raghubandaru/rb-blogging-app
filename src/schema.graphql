@@ -8,7 +8,7 @@ type Query {
     first: Int
     skip: Int
     after: String
-    orderBy: UserOrderByInput!
+    orderBy: UserOrderByInput
   ): [User!]!
   posts(
     query: String

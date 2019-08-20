@@ -8,7 +8,7 @@ const getUserId = (request, requireAuth = true) => {
   // return decoded user if header exists
   if (header) {
     const token = header.replace("Bearer ", "")
-    const decoded = jwt.verify(token, "lara375")
+    const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
     return decoded.userId
   }
